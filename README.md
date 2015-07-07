@@ -29,19 +29,13 @@ Project-build.gradle
          }
      }
 
-App-build.gradle:
-    android {
-        //配置信息
-        packagingOptions {
-        exclude 'META-INF/services/javax.annotation.processing.Processor'
-        exclude 'META-INF/LICENSE.txt'
-        exclude 'META-INF/NOTICE.txt'
-        }
-    }
-
 Gradle依赖
 -----------------------------------
 App-build.gradle:<br />
 
     compile 'j2w.team.view:base:1.0.1' <br /> //正式版
+
+Widget用法
+-----------------------------------
+
     
