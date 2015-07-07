@@ -1,0 +1,34 @@
+//框架开发模式-需要测试
+//apply plugin: 'com.android.application'
+apply plugin: 'android-library'
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        minSdkVersion 11
+        targetSdkVersion 21
+        versionCode 101
+        versionName "1.0.1"
+    }
+    buildTypes {
+        release {
+            // 支持自动去除没有使用的资源 默认关闭
+            minifyEnabled false
+            shrinkResources false
+            //混淆文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    //外部依赖
+    //noinspection GradleCompatible
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
+    compile 'com.nineoldandroids:library:2.4.0'
+}
+//打包
+apply from: 'maven-release-aar.gradle'

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="J2WRefreshStyle">
+        <attr name="loading_color1" format="integer" />
+        <attr name="loading_color2" format="integer" />
+        <attr name="loading_color3" format="integer" />
+        <attr name="loading_color4" format="integer" />
+    </declare-styleable>
+
+    <!-- 控件点击波纹效果 -->
+    <declare-styleable name="LButtonStyle">
+        <attr name="widget_animColor" format="reference|color" />
+        <attr name="widget_background" format="reference|color" />
+        <attr name="widget_delayclick" format="boolean" />
+        <attr name="widget_type">
+            <enum name="normal" value="0" />
+            <enum name="left" value="1" />
+            <enum name="right" value="2" />
+            <enum name="center" value="3" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="PreferenceStyle">
+        <attr name="preference_title" format="string" />
+        <attr name="preference_summary" format="string" />
+        <attr name="preference_checked" format="boolean" />
+        <attr name="preference_show_divider" format="boolean" />
+    </declare-styleable>
+    <!-- 控件点击波纹效果 -->
+    <!-- 动态改变大小textview-->
+    <attr name="autoScaleTextViewStyle" format="reference" />
+    <declare-styleable name="AutoScaleTextView">
+        <attr name="minTextSize" format="dimension" />
+    </declare-styleable>
+
+    <!-- 可拉伸 -->
+    <declare-styleable name="J2WDragTopLayout">
+        <attr name="dtlCollapseOffset" format="dimension" />
+
+        <attr name="dtlOverDrag" format="boolean" />
+
+        <attr name="dtlOpen" format="boolean" />
+
+        <attr name="dtlTopView" format="reference" />
+
+        <attr name="dtlDragContentView" format="reference" />
+
+        <attr name="dtlCaptureTop" format="boolean" />
+    </declare-styleable>
+</resources>
