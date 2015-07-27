@@ -1,4 +1,4 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.listview;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -22,7 +22,9 @@ import android.widget.TabWidget;
 import android.widget.TextView;
 
 /**
- * 提示信息
+ * @创建人 sky
+ * @创建时间 15/5/5 下午4:43
+ * @类描述 ListView滑动 提示文字
  */
 public class J2WBadgeView extends TextView {
 
@@ -82,7 +84,7 @@ public class J2WBadgeView extends TextView {
 	 * Constructor -
 	 * 
 	 * create a new BadgeView instance attached to a target
-	 * {@link android.view.View}.
+	 * {@link View}.
 	 *
 	 * @param context
 	 *            context for this view.
@@ -95,9 +97,9 @@ public class J2WBadgeView extends TextView {
 
 	/**
 	 * Constructor -
-	 * 
+	 *
 	 * create a new BadgeView instance attached to a target
-	 * {@link android.widget.TabWidget} tab at a given index.
+	 * {@link TabWidget} tab at a given index.
 	 *
 	 * @param context
 	 *            context for this view.

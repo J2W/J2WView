@@ -1,4 +1,4 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.viewpager;
 
 import android.animation.Animator;
 import android.animation.ArgbEvaluator;
@@ -12,7 +12,9 @@ import android.util.AttributeSet;
 import android.view.View;
 
 /**
- * Created by skyJC on 2015/3/26. yong
+ * @创建人 sky
+ * @创建时间 15/7/27 上午10:34
+ * @类描述 ViewPager 背景切换
  */
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class J2WVPColorAnimation extends View implements ValueAnimator.AnimatorUpdateListener, Animator.AnimatorListener {

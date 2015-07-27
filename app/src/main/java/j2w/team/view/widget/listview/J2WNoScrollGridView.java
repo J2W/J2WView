@@ -1,4 +1,4 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.listview;
 
 import android.content.Context;
 import android.util.AttributeSet;

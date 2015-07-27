@@ -1,4 +1,4 @@
-package j2w.team.view.widget.dragLayout;
+package j2w.team.view.widget.viewpager.dragLayout;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -17,9 +17,10 @@ import android.widget.RelativeLayout;
 
 import com.nineoldandroids.view.ViewHelper;
 
-
 /**
- * sky  
+ * @创建人 sky
+ * @创建时间 15/7/27 上午10:34
+ * @类描述 模仿QQ 滑动
  */
 public class J2WDragLayout extends FrameLayout {
 
@@ -45,7 +46,7 @@ public class J2WDragLayout extends FrameLayout {
 
 	private RelativeLayout			vg_left;
 
-	private J2WRelativeLayout vg_main;
+	private J2WRelativeLayout		vg_main;
 
 	private Status					status			= Status.Close;
 

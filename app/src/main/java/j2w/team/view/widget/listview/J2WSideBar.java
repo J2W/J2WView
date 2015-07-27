@@ -1,4 +1,4 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.listview;
 
 import android.annotation.TargetApi;
 import android.content.Context;

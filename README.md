@@ -33,7 +33,7 @@ Gradle依赖
 -----------------------------------
 App-build.gradle:<br />
 
-    compile 'j2w.team.view:base:1.0.1' <br /> //正式版
+    compile 'j2w.team:view:1.0.0' <br /> //正式版
 
 Widget用法
 -----------------------------------

@@ -1,4 +1,7 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.viewpager;
+
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
@@ -8,12 +11,10 @@ import android.view.View;
 
 import com.nineoldandroids.view.ViewHelper;
 
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-
-
 /**
- * Created by sky on 15/3/8. 自定义viewpager
+ * @创建人 sky
+ * @创建时间 15/7/27 上午10:34
+ * @类描述 ViewPager 切换时，淡入淡出
  */
 public class J2WViewPager extends ViewPager {
 

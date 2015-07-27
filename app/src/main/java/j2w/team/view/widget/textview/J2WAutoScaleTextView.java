@@ -1,4 +1,4 @@
-package j2w.team.view.widget;
+package j2w.team.view.widget.textview;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,26 +9,28 @@ import android.widget.TextView;
 
 import j2w.team.view.R;
 
+/**
+ * @创建人 sky
+ * @创建时间 15/7/27 上午10:34
+ * @类描述 根据布局自动适配大小
+ */
+public class J2WAutoScaleTextView extends TextView {
 
-public class J2WAutoScaleTextView extends TextView
-{
-	private Paint textPaint;
+	private Paint	textPaint;
 
-	private float preferredTextSize;
-	private float minTextSize;
+	private float	preferredTextSize;
 
-	public J2WAutoScaleTextView(Context context)
-	{
+	private float	minTextSize;
+
+	public J2WAutoScaleTextView(Context context) {
 		this(context, null);
 	}
 
-	public J2WAutoScaleTextView(Context context, AttributeSet attrs)
-	{
+	public J2WAutoScaleTextView(Context context, AttributeSet attrs) {
 		this(context, attrs, R.attr.autoScaleTextViewStyle);
 	}
 
-	public J2WAutoScaleTextView(Context context, AttributeSet attrs, int defStyle)
-	{
+	public J2WAutoScaleTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 
 		this.textPaint = new Paint();
@@ -46,8 +48,7 @@ public class J2WAutoScaleTextView extends TextView
 	 * @param minTextSize
 	 *            The minimum text size
 	 */
-	public void setMinTextSize(float minTextSize)
-	{
+	public void setMinTextSize(float minTextSize) {
 		this.minTextSize = minTextSize;
 	}
 
@@ -59,10 +60,8 @@ public class J2WAutoScaleTextView extends TextView
 	 * @param textWidth
 	 *            The width of the TextView. > 0
 	 */
-	private void refitText(String text, int textWidth)
-	{
-		if (textWidth <= 0 || text == null || text.length() == 0)
-			return;
+	private void refitText(String text, int textWidth) {
+		if (textWidth <= 0 || text == null || text.length() == 0) return;
 
 		// the width
 		int targetWidth = textWidth - this.getPaddingLeft() - this.getPaddingRight();
@@ -71,30 +70,23 @@ public class J2WAutoScaleTextView extends TextView
 
 		this.textPaint.set(this.getPaint());
 
-		while ((this.preferredTextSize - this.minTextSize) > threshold)
-		{
+		while ((this.preferredTextSize - this.minTextSize) > threshold) {
 			float size = (this.preferredTextSize + this.minTextSize) / 2;
 			this.textPaint.setTextSize(size);
-			if (this.textPaint.measureText(text) >= targetWidth)
-				this.preferredTextSize = size; // too big
-			else
-				this.minTextSize = size; // too small
+			if (this.textPaint.measureText(text) >= targetWidth) this.preferredTextSize = size; // too
+																								// big
+			else this.minTextSize = size; // too small
 		}
 		// Use min size so that we undershoot rather than overshoot
 		this.setTextSize(TypedValue.COMPLEX_UNIT_PX, this.minTextSize);
 	}
 
-	@Override
-	protected void onTextChanged(final CharSequence text, final int start, final int before, final int after)
-	{
+	@Override protected void onTextChanged(final CharSequence text, final int start, final int before, final int after) {
 		this.refitText(text.toString(), this.getWidth());
 	}
 
-	@Override
-	protected void onSizeChanged(int width, int height, int oldwidth, int oldheight)
-	{
-		if (width != oldwidth)
-			this.refitText(this.getText().toString(), width);
+	@Override protected void onSizeChanged(int width, int height, int oldwidth, int oldheight) {
+		if (width != oldwidth) this.refitText(this.getText().toString(), width);
 	}
 
 }

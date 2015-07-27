@@ -1,4 +1,4 @@
-package j2w.team.view.widget.dragLayout;
+package j2w.team.view.widget.viewpager.dragLayout;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -6,7 +6,9 @@ import android.view.MotionEvent;
 import android.widget.RelativeLayout;
 
 /**
- * sky
+ * @创建人 sky
+ * @创建时间 15/7/27 上午10:34
+ * @类描述 自定义相对布局
  */
 public class J2WRelativeLayout extends RelativeLayout {
 
