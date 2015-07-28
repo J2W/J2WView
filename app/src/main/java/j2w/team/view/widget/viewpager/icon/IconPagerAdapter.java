@@ -1,5 +1,7 @@
 package j2w.team.view.widget.viewpager.icon;
 
+import android.widget.ImageView;
+
 /**
  * @创建人 sky
  * @创建时间 15/7/27 上午10:34
@@ -35,5 +37,5 @@ public interface IconPagerAdapter {
 	 * 
 	 * @return
 	 */
-	int getIconLayout();
+	ImageView getIconLayout();
 }
