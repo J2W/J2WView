@@ -5,4 +5,8 @@
     <declare-styleable name="AutoScaleTextView">
         <attr name="minTextSize" format="dimension" />
     </declare-styleable>
+    <declare-styleable name="CollapseOnScrollView">
+        <attr name="stayVisibleId" format="reference" />
+        <attr name="expandOnDragId" format="reference" />
+    </declare-styleable>
 </resources>
